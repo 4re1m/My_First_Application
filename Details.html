@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Profile.css">
+    <style>
+        img{
+            border-radius:50%;
+        }
+        body{
+        background-color: rgb(43, 226, 202);
+        background-image:url('fff1.jfif');
+        background-repeat: no-repeat;
+        background-size:120% 100%;
+       }
+       button{
+        background-color:grey;
+        color: black;
+        border:2px solid black;
+        text-align: center;
+        display: inline-block;
+        border-radius:30px;
+        cursor: pointer;
+        padding-left: 4px;
+        padding-right: 4px;
+       }
+       button:hover{
+        background-color: black;
+        color: bisque;
+        border:2px solid white;
+       }
+    </style>
+</head>
+<body style="text-align:center;">
+    <div style="padding:35px;"> 
+        <img src="picture.jpg" height="150" width="150">
+    </div>  
+    <div id="div2">
+        <button onclick="openIntro()"><img src="picon.jfif" height="20px" width="20px"></button><br><br>
+        <button onclick="openJob()"><h2>Job</h2></button><br><br>
+        <button onclick="openEducation()"><h2>Education</h2></button><br><br>
+        <button onclick="openProjects()"><h2>Projects</h2></button><br><br>
+        <button onclick="openCertification()"><h2>Certifications</h2></button><br><br>
+        <button onclick="openPersonal()"><h2>Personal Details</h2></button><br><br>
+    </div>
+    <script>
+        function openIntro(){
+            window.open("intro.html","my","");
+        }
+        function openJob() {
+            window.open("job.html","my","");
+        }
+        function openEducation(){
+            window.open("education.html","my","");
+        }
+        function openProjects(){
+            window.open("projects.html","my","");
+        }
+        function openCertification(){
+            window.open("certification.html","my","");
+        }
+        function openPersonal(){
+            window.open("personal.html","my","");
+        }
+    </script>
+</body>
+</html>

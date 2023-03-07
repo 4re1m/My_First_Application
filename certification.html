@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id = "bdy">
+        <button onclick="prev()">Previous</button>
+        <button onclick="next()">Next</button><br><br>
+        <img id="image" src="ce1.jpg"><br>
+        <script>
+            function next() {
+                document.getElementById("image").src="ce2.jpg";
+            }
+            function prev(){
+                document.getElementById("image").src="ce1.jpg";
+            }
+            var x=document.getElementById("bdy");
+            x.style.paddingLeft="100px";
+            x.style.paddingRight= "100px";
+            x.style.paddingTop= "50px";
+            var y=document.getElementsByTagName("img");
+            for(var i=0;i<y.length;i++){
+                y[i].style.borderRadius="2px";
+                y[i].style.border="4px";
+                y[i].style.height="600px";
+                y[i].style.width="600px";
+                y[i].style.opacity="0.8";
+                y[i].addEventListener("mouseover",myFun);
+                y[i].addEventListener("mouseout",myFunc);
+            }
+            function myFun(){
+                this.style.opacity="1.6";
+            }
+            function myFunc(){
+                this.style.borderRadius="2px";
+                this.style.border="4px";
+                this.style.height="600px";
+                this.style.width="600px";
+                this.style.opacity="0.8";
+            }
+            var btn=document.getElementsByTagName("button");
+            for(var i=0;i<btn.length;i++){
+                btn[i].style.color="black";
+                btn[i].style.backgroundColor="grey";
+                btn[i].style.border="3px solid black";
+                btn[i].style.borderRadius="50%";
+                btn[i].addEventListener("mouseover",butn);
+                btn[i].addEventListener("mouseout",butnHover);
+            }
+            function butn() {
+               this.style.color="antiquewhite";
+               this.style.backgroundColor="black";
+               this.style.border="3px solid grey";
+            }
+            function butnHover() {
+                this.style.color="black";
+                this.style.backgroundColor="grey";
+                this.style.border="3px solid black";
+            }
+        </script>
+</body>
+</html>
