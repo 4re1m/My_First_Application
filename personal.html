@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+#accordian{
+    margin: 100px auto;
+    width: 600px;
+}
+#accordian li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background:grey;
+    padding: 10px;
+    border-radius: 4px;
+}
+#accordian li label{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: black;
+}
+#accordian li label span{
+    transform: rotate(90deg);
+    font-size: 22px;
+    color: #333;
+}
+#accordian label + input[type="radio"]{
+    display: none;
+}
+#accordian .content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+  
+}
+#accordian label + input[type="radio"]:checked + .content{
+    max-height: 400px; 
+}
+
+    </style>
+</head>
+<body>
+    <ul id="accordian">
+        <li>
+            <label for="first"><h2>PersonalDetails</h2><span>&#x3e;</span></label>
+            <input type="radio" name="accordian" id="first">
+            <div class="content">
+                <ol>
+                    <li>Fathers Name : Balakishan K</li>
+                    <li>Mobile : 9885698809</li>
+                    <li>Mothers Name : Uma K</li>
+                    <li>Mobile : 9364804232</li>
+                    <li>Address : <ul>
+                        <li>House No : 1-47/1,</li>
+                        <li>Village : Rameshwarpally,</li>
+                        <li>Town : Bhiknoor,</li>
+                        <li>District : Kamareddy,</li>
+                        <li>State : Telangana</li>
+                        </ul>
+                    </li>
+                </ol> 
+            </div>
+        </li>
+        <li>
+            <label for="Second"><h2>Emergency Contact</h2><span>&#x3e;</span></label>
+            <input type="radio" name="accordian" id="Second">
+            <div class="content">
+                <ol>
+                    <li>Relation : Brother
+                        <ul><li>Mobile : 7416379051</li></ul>
+                    </li>
+                    <li>Relation : Father
+                        <ul><li>Mobile : 9652792597</li></ul>
+                    </li>                
+                </ol>
+            </div>
+        </li>
+        <li>
+            <label for="third"><h2>Hobbies</h2><span>&#x3e;</span></label>
+            <input type="radio" name="accordian" id="third">
+            <div class="content">
+                <ol>
+                    <li>Singing</li>
+                    <li>Listening</li>
+                    <li>Playing Cricket</li>
+                    <li>Watching Cricket</li>
+                </ol>
+            </div>
+        </li>
+        <li>
+            <label for="fourth"><h2>Skills</h2><span>&#x3e;</span></label>
+            <input type="radio" name="accordian" id="fourth">
+            <div class="content">
+                <ol>
+                    <li>JAVA PROGRAMMING</li>
+                    <li>HTML&CSS</li>
+                    <li>JAVA SCRIPT</li>
+                    <li>MYSQL</li>
+                </ol>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

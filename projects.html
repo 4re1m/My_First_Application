@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 5px solid black;
+            background-color: rgb(196, 253, 255);
+            padding-left: 20px;
+            opacity: 1;
+            border-radius: 50px;
+        }           
+        body{
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="prev()">Previous</button>
+    <button onclick="next()">Next</button><br><br>
+    <div id="myDiv">
+        <u><h1>Breast-Cancer-Prediction</h1></u>
+        <p>Women are seriously threatened by breast cancer with high morbidity and mortality. 
+         The lack of robust prognosis models results in difficulty for doctors to prepare a treatment plan that may prolong patient survival time.
+         Hence, the requirement of time is to develop the technique which gives minimum error to increase accuracy.
+         Four algorithm SVM, Logistic Regression, Random Forest and KNN which predict the breast cancer outcome have been compared in the paper using different datasets.
+         All experiments are executed within a simulation environment and conducted in JUPYTER platform. Aim of research categorises in three domains.
+         First domain is prediction of cancer before diagnosis, second domain is prediction of diagnosis and treatment and third domain focuses on outcome during treatment.
+         The proposed work can be used to predict the outcome of different technique and suitable technique can be used depending upon requirement.
+         This research is carried out to predict the accuracy.</p>
+    </div><br>
+    <script>
+      function next() {
+        const multilineString=
+            "<u><h1>Image-Gesture-Recognization</h1></u>"+
+            " <p>Identification is becoming a crucial step in most of the modern world problem-solving systems."+
+            "Approaches for image detection, analysis and classification are available in glut, but the difference between such approaches is still arcane."+
+            "It essential that proper distinctions between such techniques should be interpreted and they should be analyzed."+
+            "Standard American Sign Language (ASL) images of a person's hand photographed under several different environmental conditions are taken as the dataset."+
+            "The main aim is to recognize and classify such hand gestures to their correct meaning with the maximum accuracy possible."+
+            "A novel approach for the same has been proposed and some other widely popular models have compared with it."+
+            "The different preprocessing techniques used are Histogram of Gradients, Principal Component Analysis, Local Binary Patterns."+
+            "The novel model is made using canny edge detection, ORB and bag of word technique. The preprocessed data is passed through several classifiers"+ 
+           "The accuracy of the new models has been found significantly higher than the existing model."+
+        "</p>"
+        document.getElementById("myDiv").innerHTML=multilineString;
+      }
+      function prev() {
+        const multilineString="<u><h1>Breast-Cancer-Prediction</h1></u>"+
+        "<p>Women are seriously threatened by breast cancer with high morbidity and mortality."+
+        "The lack of robust prognosis models results in difficulty for doctors to prepare a treatment plan that may prolong patient survival time."+
+         "Hence, the requirement of time is to develop the technique which gives minimum error to increase accuracy."+
+         "Four algorithm SVM, Logistic Regression, Random Forest and KNN which predict the breast cancer outcome have been compared in the paper using different datasets."+
+         "All experiments are executed within a simulation environment and conducted in JUPYTER platform. Aim of research categorises in three domains."+
+         "First domain is prediction of cancer before diagnosis, second domain is prediction of diagnosis and treatment and third domain focuses on outcome during treatment."+
+         "The proposed work can be used to predict the outcome of different technique and suitable technique can be used depending upon requirement."+
+         "This research is carried out to predict the accuracy.</p>"
+         document.getElementById("myDiv").innerHTML=multilineString;
+      }
+      var btn=document.getElementsByTagName("button");
+            for(var i=0;i<btn.length;i++){
+                btn[i].style.color="black";
+                btn[i].style.backgroundColor="grey";
+                btn[i].style.border="2px solid black";
+                btn[i].style.borderRadius="50%";
+                btn[i].addEventListener("mouseover",butn);
+                btn[i].addEventListener("mouseout",butnHover);
+            }
+            function butn() {
+               this.style.color="antiquewhite";
+               this.style.backgroundColor="black";
+               this.style.border="2px solid grey";
+            }
+            function butnHover() {
+                this.style.color="black";
+                this.style.backgroundColor="grey";
+                this.style.border="2px solid black";
+            }
+    </script>
+</body>
+</html>

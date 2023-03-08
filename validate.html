@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+background-color: rgb(0, 255, 204);
+text-align: center;
+padding-left: 100px;
+padding-right: 100px;
+padding-top: 100px;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+input{
+  color: black;
+  background-color: grey;
+  border: 1px solid black;
+}
+input:hover{
+    color: antiquewhite;
+  background-color: black;
+  border: 3px solid grey;
+}
+    </style>
+</head>
+<body>
+    <img src="My_Assignment/picon.jfif"><br><br>
+    <form name="myForm">
+      Employee_Id : <input type="text" name="eid"><br><br>
+      Password : <input type="password" name="pass"><br><br>
+      <input type="button" value="LOGIN" onclick="myFunc()">
+    </form>
+    <script>
+        function myFunc() {
+            var x=document.forms["myForm"]["eid"].value;
+            var y=document.forms["myForm"]["pass"].value;
+            if(x=="Nikhil"&&y=="Nikhil@123"){
+                window.location = "My_Assignment/Profile.html";  
+            }
+            else{
+                alert("Username/Password is Incorrect");
+            }
+        }
+    </script>
+</body>
+</html>

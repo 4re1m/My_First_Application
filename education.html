@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        text-align: center;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 100px;
+        }
+        div{
+        color:black;
+        background-color: grey;
+        border: 1px solid antiquewhite;
+        padding-left: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-right: 25px;
+        border-radius: 50px;
+        }
+        div:hover{
+            color: antiquewhite;
+            background-color: black;
+            border: 1px solid antiquewhite;
+        }
+        </style>
+</head>
+<body>
+    Standard: <input type="text" id="myText" name="input1"><br><br>
+  <button onclick="myFunc()">Details</button>
+  <button onclick="myEmpty()">Reset</button>
+<h2>Information</h2><hr>
+<span id="multiline"></span>
+<script>
+    function myFunc(){
+       var x=document.getElementById("myText").value;
+        if(x=="10"){
+           const multilineString=
+           "<div>"+
+            `<h2>Class ${x}</h2>`+
+            "<p>95%</p>"+
+            "<p>Akshara High School</p>"+
+            "<p>Subjects: Maths, English, Hindi, Science, Social</p>"
+           "</div>";
+	     document.getElementById('multiline').innerHTML = multilineString; 
+        }
+        else if(x=="12"){
+            const multilineString=
+           "<div>"+
+            `<h2>Class ${x}</h2>`+
+            "<p>95%</p>"+
+            "<p>Narayana Junior College</p>"+
+            "<p>Subjects: Maths, Physics, Chemistry, Computer, English</p>"
+           "</div>";
+	     document.getElementById('multiline').innerHTML = multilineString; 
+        }
+        else if(x=="BTech"){
+            const multilineString=
+           "<div>"+
+            `<h2>Class ${x}</h2>`+
+            "<p>86%</p>"+
+            "<p>Gokaraju Ragaraju Institute of Engineering and Technology</p>"+
+            "<p>Computer Science Engineering</p>"
+           "</div>";
+	     document.getElementById('multiline').innerHTML = multilineString; 
+        }
+        else{
+            alert("Enter Valid Class");
+        }
+    }
+    function myEmpty() {
+        document.getElementById("myText").value="";
+        document.getElementById("multiline").innerHTML="";
+    }
+    var btn=document.getElementsByTagName("button");
+            for(var i=0;i<btn.length;i++){
+                btn[i].style.color="black";
+                btn[i].style.backgroundColor="grey";
+                btn[i].style.border="2px solid black";
+                btn[i].style.borderRadius="50%";
+                btn[i].addEventListener("mouseover",butn);
+                btn[i].addEventListener("mouseout",butnHover);
+            }
+            function butn() {
+               this.style.color="antiquewhite";
+               this.style.backgroundColor="black";
+               this.style.border="2px solid grey";
+            }
+            function butnHover() {
+                this.style.color="black";
+                this.style.backgroundColor="grey";
+                this.style.border="2px solid black";
+            }
+</script>
+</body>
+</html>
